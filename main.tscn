@@ -4,7 +4,7 @@
 [ext_resource path="res://bike.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 572.555, 38.901 )
+extents = Vector2( 39617.7, 38.901 )
 
 [node name="Main" type="Node2D"]
 
@@ -20,7 +20,7 @@ position = Vector2( 469.366, 463.308 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Earth/StaticBody2D"]
-position = Vector2( 473.645, 463.308 )
-scale = Vector2( 0.786242, 0.0528009 )
+position = Vector2( 9446.42, 641.623 )
+scale = Vector2( 14.0507, 0.307689 )
 texture = ExtResource( 1 )
 normal_map = ExtResource( 1 )
