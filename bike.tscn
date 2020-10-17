@@ -7,7 +7,7 @@
 [sub_resource type="PhysicsMaterial" id=1]
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 28.0998
+radius = 27.8492
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 27.6104
@@ -31,12 +31,14 @@ texture = ExtResource( 1 )
 current = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Body"]
-polygon = PoolVector2Array( -7.32648, 17.6046, 42.2269, 13.3571, 23.5854, -22.0382, -21.7206, -21.0943, -45.0815, 13.5931 )
+polygon = PoolVector2Array( -7.32648, 17.6046, 25.4721, -14.0343, 23.5854, -22.0382, -21.7206, -21.0943 )
+one_way_collision_margin = 0.0
 
 [node name="PinFront" type="PinJoint2D" parent="Body"]
 position = Vector2( 40.269, 12.2343 )
 node_a = NodePath("../../front")
 node_b = NodePath("..")
+disable_collision = false
 
 [node name="PinBack" type="PinJoint2D" parent="Body"]
 position = Vector2( -41.5072, 12.1016 )
@@ -49,11 +51,17 @@ position = Vector2( 40.2405, 12.1328 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="front"]
 position = Vector2( -0.0272217, 0.0150166 )
 shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Sprite" type="Sprite" parent="front"]
 position = Vector2( 0.0693817, 0.0830994 )
 scale = Vector2( 0.153, 0.153 )
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="back" type="RigidBody2D" parent="."]
 position = Vector2( -41.3669, 12.2419 )
@@ -61,8 +69,14 @@ position = Vector2( -41.3669, 12.2419 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="back"]
 position = Vector2( -0.0224304, 0.0705643 )
 shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Sprite" type="Sprite" parent="back"]
 position = Vector2( -0.231094, 0.0621796 )
 scale = Vector2( 0.153, 0.153 )
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
