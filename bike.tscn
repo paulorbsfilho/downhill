@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://bike2.png" type="Texture" id=1]
 [ext_resource path="res://wheel.png" type="Texture" id=2]
-[ext_resource path="res://bike.gd" type="Script" id=3]
 
 [sub_resource type="PhysicsMaterial" id=1]
 
@@ -13,7 +12,6 @@ radius = 27.8492
 radius = 27.6104
 
 [node name="bike" type="Node2D"]
-script = ExtResource( 3 )
 
 [node name="Body" type="RigidBody2D" parent="."]
 physics_material_override = SubResource( 1 )
@@ -31,22 +29,28 @@ texture = ExtResource( 1 )
 current = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Body"]
-polygon = PoolVector2Array( -7.32648, 17.6046, 25.4721, -14.0343, 23.5854, -22.0382, -21.7206, -21.0943 )
+z_as_relative = false
+polygon = PoolVector2Array( -7.32648, 17.6046, 43.217, 14.0395, 23.5854, -22.0382, -21.7206, -21.0943, -45.2713, 13.8036 )
 one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="PinFront" type="PinJoint2D" parent="Body"]
 position = Vector2( 40.269, 12.2343 )
 node_a = NodePath("../../front")
 node_b = NodePath("..")
-disable_collision = false
+bias = 0.9
 
 [node name="PinBack" type="PinJoint2D" parent="Body"]
 position = Vector2( -41.5072, 12.1016 )
 node_a = NodePath("../../back")
 node_b = NodePath("..")
+bias = 0.9
 
 [node name="front" type="RigidBody2D" parent="."]
 position = Vector2( 40.2405, 12.1328 )
+collision_mask = 2147483649
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="front"]
 position = Vector2( -0.0272217, 0.0150166 )
