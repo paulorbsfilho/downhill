@@ -15,6 +15,7 @@ radius = 27.6104
 [node name="bike" type="Node2D"]
 
 [node name="Body" type="RigidBody2D" parent="."]
+mass = 2.3051
 physics_material_override = SubResource( 1 )
 gravity_scale = 9.0
 __meta__ = {
@@ -33,6 +34,9 @@ current = true
 z_as_relative = false
 polygon = PoolVector2Array( -7.32648, 17.6046, 43.217, 14.0395, 23.5854, -22.0382, -21.7206, -21.0943, -45.2713, 13.8036 )
 one_way_collision_margin = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="PinFront" type="PinJoint2D" parent="Body"]
 position = Vector2( 40.269, 12.2343 )

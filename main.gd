@@ -1,16 +1,16 @@
 extends Node2D
 
 #front
-var FX1 = 40;
-var FX2 = 40;
-var FY1 = 0;
-var FY2 = -5;
+var FX1 = 0;
+var FX2 = -10;
+var FY1 = -30;
+var FY2 = -30;
 
 #back
-var BX1 = 20;
-var BX2 = 20;
-var BY1 = 0;
-var BY2 = -5; 
+var BX1 = 0;
+var BX2 = 10;
+var BY1 = -30;
+var BY2 = -30;
 
 func _ready():
 	pass # Replace with function body.
